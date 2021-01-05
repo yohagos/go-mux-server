@@ -160,9 +160,6 @@ func findResources(versionDirectory string) ([]string, []string) {
 	isError(err)
 	staticPath = staticPath + filePathSeparator + versionDirectory
 
-	/* 	staticPath = "C:\\test\\tdimoHttpInterface-20201021-122723\\" + versionDirectory
-	   	fmt.Println(staticPath) */
-
 	err = filepath.Walk(staticPath, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
